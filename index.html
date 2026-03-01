@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 flex items-center justify-center p-6">
+    <div class="w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-10 text-white">
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-white/30 blur-2xl"></div>
+                    <div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-white/30 blur-2xl"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-sm">
+                        <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+                        <span>Sports Club</span>
+                    </div>
+
+                    <h1 class="mt-6 text-4xl font-extrabold leading-tight">
+                        Join the team.
+                        <br />
+                        Track your progress.
+                    </h1>
+
+                    <p class="mt-4 text-white/90 leading-relaxed">
+                        Create your account to access training plans, match stats, and personalized updates.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 h-9 w-9 rounded-xl bg-white/15 flex items-center justify-center">⚡</div>
+                            <div>
+                                <div class="font-semibold">Fast setup</div>
+                                <div class="text-white/80 text-sm">Start in under 30 seconds.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 h-9 w-9 rounded-xl bg-white/15 flex items-center justify-center">📈</div>
+                            <div>
+                                <div class="font-semibold">Progress insights</div>
+                                <div class="text-white/80 text-sm">See improvements over time.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1 h-9 w-9 rounded-xl bg-white/15 flex items-center justify-center">🛡️</div>
+                            <div>
+                                <div class="font-semibold">Privacy-first</div>
+                                <div class="text-white/80 text-sm">Your data stays protected.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 text-sm text-white/80">
+                        Already have an account?
+                        <a href="#" class="text-white font-semibold underline underline-offset-4">Login</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 bg-white">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Create account</h2>
+                        <p class="text-slate-500 mt-1">Use your email to sign up.</p>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-2 text-slate-500 text-sm">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                        <span>Secure</span>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="mt-6 w-full rounded-2xl border border-slate-200 px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50 transition"
+                    id="btnGoogle"
+                >
+                    Continue with Google
+                </button>
+
+                <div class="my-6 flex items-center gap-3">
+                    <div class="h-px flex-1 bg-slate-200"></div>
+                    <div class="text-xs text-slate-400">OR</div>
+                    <div class="h-px flex-1 bg-slate-200"></div>
+                </div>
+
+                <form id="signupForm" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-sm font-medium text-slate-700">First name</label>
+                            <input
+                                id="firstName"
+                                type="text"
+                                placeholder="Bao"
+                                class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-500"
+                                required
+                                minlength="2"
+                            />
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-slate-700">Last name</label>
+                            <input
+                                id="lastName"
+                                type="text"
+                                placeholder="Nguyen"
+                                class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-500"
+                                required
+                                minlength="1"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium text-slate-700">Email</label>
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-500"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium text-slate-700">Password</label>
+                        <div class="mt-1 relative">
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="••••••••"
+                                class="w-full rounded-2xl border border-slate-200 px-4 py-3 pr-12 outline-none focus:ring-2 focus:ring-indigo-500"
+                                required
+                                minlength="6"
+                            />
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="absolute inset-y-0 right-3 my-auto text-slate-500 hover:text-slate-700 text-sm font-semibold"
+                            >
+                                Show
+                            </button>
+                        </div>
+                        <p class="mt-2 text-xs text-slate-500">Minimum 6 characters.</p>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <input id="terms" type="checkbox" class="mt-1 h-4 w-4 rounded text-indigo-600" />
+                        <label for="terms" class="text-sm text-slate-600">
+                            I agree to the
+                            <a href="#" class="text-indigo-600 hover:underline">Terms</a>
+                            and
+                            <a href="#" class="text-indigo-600 hover:underline">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full rounded-2xl bg-slate-900 text-white py-3 font-semibold hover:bg-slate-800 transition"
+                    >
+                        Create account
+                    </button>
+
+                    <div id="message" class="hidden text-sm text-center"></div>
+                </form>
+
+                <p class="mt-6 text-xs text-slate-500 leading-relaxed">
+                    By creating an account, you agree to receive service updates. You can unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const message = document.getElementById('message');
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const btnGoogle = document.getElementById('btnGoogle');
+
+        togglePassword.addEventListener('click', () => {
+            const isHidden = passwordInput.type === 'password';
+            passwordInput.type = isHidden ? 'text' : 'password';
+            togglePassword.textContent = isHidden ? 'Hide' : 'Show';
+        });
+
+        btnGoogle.addEventListener('click', () => {
+            alert('Google sign-in (demo)');
+        });
+
+        function showMessage(text, ok) {
+            message.textContent = text;
+            message.classList.remove('hidden', 'text-red-600', 'text-emerald-600');
+            message.classList.add(ok ? 'text-emerald-600' : 'text-red-600');
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (firstName.length < 2) {
+                showMessage('First name must be at least 2 characters.', false);
+                return;
+            }
+
+            if (!lastName) {
+                showMessage('Last name is required.', false);
+                return;
+            }
+
+            if (!terms) {
+                showMessage('Please accept the Terms and Privacy Policy.', false);
+                return;
+            }
+
+            if (password.length < 6) {
+                showMessage('Password must be at least 6 characters.', false);
+                return;
+            }
+
+            showMessage('Account created successfully! (demo)', true);
+            form.reset();
+            passwordInput.type = 'password';
+            togglePassword.textContent = 'Show';
+        });
+    </script>
+</body>
+</html>
